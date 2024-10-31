@@ -1,0 +1,121 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="image-gc" id="7c4Cvfz6qgkgnFs05wWo">
+    <mxGraphModel dx="954" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-28" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="60" width="800" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-1" value="kubelet" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="190" y="90" width="100" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-2" value="CRI" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="350" y="90" width="100" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-3" value="node disk" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="480" y="90" width="100" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-4" value="registry" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="610" y="90" width="100" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-5" value="&lt;font color=&quot;#cc0000&quot;&gt;ImageService.PullImage&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="PutZzIfS9ZkzmOGC-hlr-1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="269.5" y="180" as="sourcePoint" />
+            <mxPoint x="399.5" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-6" value="download image" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="PutZzIfS9ZkzmOGC-hlr-2" target="PutZzIfS9ZkzmOGC-hlr-4">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="460" y="320" as="sourcePoint" />
+            <mxPoint x="540" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="490" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-7" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="200" as="sourcePoint" />
+            <mxPoint x="400" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-8" value="save image to disk" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="399.5" y="224" as="sourcePoint" />
+            <mxPoint x="529.5" y="224" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="224" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-11" value="download image" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;dashed=1;fillColor=#fff2cc;strokeColor=#d6b656;width=100;height=30;" vertex="1" parent="1">
+          <mxGeometry x="100" y="150" width="640" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-12" value="GC" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;width=100;height=20;" vertex="1" parent="1">
+          <mxGeometry x="100" y="260" width="640" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-13" value="&lt;font color=&quot;#cc0000&quot;&gt;ImageService.ListImages&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="PutZzIfS9ZkzmOGC-hlr-1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="269.5" y="298" as="sourcePoint" />
+            <mxPoint x="399.5" y="298" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-14" value="&lt;font color=&quot;#7f00ff&quot;&gt;RuntimeService.ListPodSandbox&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="PutZzIfS9ZkzmOGC-hlr-1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="270" y="330" as="sourcePoint" />
+            <mxPoint x="399.5" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-15" value="&lt;font color=&quot;#7f00ff&quot;&gt;RuntimeService.ListContainers&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="PutZzIfS9ZkzmOGC-hlr-1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="269.5" y="358" as="sourcePoint" />
+            <mxPoint x="399.5" y="358" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-19" value="1. imagesInEvictionOrder" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="310" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-20" value="2. freeOldImages" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="388" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-21" value="&lt;font color=&quot;#cc0000&quot;&gt;ImageService.RemoveImage&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="PutZzIfS9ZkzmOGC-hlr-1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="269.5" y="407" as="sourcePoint" />
+            <mxPoint x="399.5" y="407" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-22" value="3. ImageFsStats" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="440" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-23" value="&lt;font color=&quot;#cc0000&quot;&gt;ImageService.ImageFsInfo&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="PutZzIfS9ZkzmOGC-hlr-22">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="269.5" y="459.5" as="sourcePoint" />
+            <mxPoint x="399.5" y="459.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-24" value="4. freeSpace" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="490" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-25" value="&lt;font color=&quot;#cc0000&quot;&gt;ImageService.RemoveImage&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="PutZzIfS9ZkzmOGC-hlr-24">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="270" y="509.5" as="sourcePoint" />
+            <mxPoint x="400" y="509.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-26" value="remove image" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="399.5" y="419.5" as="sourcePoint" />
+            <mxPoint x="529.5" y="419.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PutZzIfS9ZkzmOGC-hlr-27" value="remove image" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="400" y="520" as="sourcePoint" />
+            <mxPoint x="530" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
