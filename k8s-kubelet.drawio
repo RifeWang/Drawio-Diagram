@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17" pages="2">
   <diagram name="image-gc" id="7c4Cvfz6qgkgnFs05wWo">
     <mxGraphModel dx="954" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -113,6 +113,68 @@
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="400" y="520" as="sourcePoint" />
             <mxPoint x="530" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="eg2Hx7dkelEWCkRxHSLz" name="node-lifecycle">
+    <mxGraphModel dx="954" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-13" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="640" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-1" value="kubelet" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="100" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-2" value="kube-apiserver" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="350" y="80" width="100" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-3" value="controller-manager" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="500" y="80" width="106" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-4" value="&lt;font color=&quot;#cc0000&quot;&gt;POST /api/v1/nodes/&amp;lt;nodename&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="ZJ7Ltq4caiJP8JVCh5ZW-2">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="169.5" y="170" as="sourcePoint" />
+            <mxPoint x="319.5" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-5" value="&lt;font color=&quot;#7f00ff&quot;&gt;register node&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="140" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-6" value="&lt;font color=&quot;#cc0000&quot;&gt;PATCH /api/v1/nodes/&amp;lt;nodename&amp;gt;/status&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="170" y="230" as="sourcePoint" />
+            <mxPoint x="400" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-7" value="&lt;font color=&quot;#7f00ff&quot;&gt;update node status&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-8" value="&lt;font color=&quot;#cc0000&quot;&gt;POST/PUT /apis/coordination.k8s.io/v1/namespaces/kube-node-lease/leases/&amp;lt;nodename&amp;gt;&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="169.5" y="294.5" as="sourcePoint" />
+            <mxPoint x="399.5" y="294.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-9" value="&lt;font color=&quot;#7f00ff&quot;&gt;create/update node lease&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="62" y="250" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-10" value="&lt;font color=&quot;#cc6600&quot;&gt;monitor node health&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="552.5" y="350" as="sourcePoint" />
+            <mxPoint x="399.5" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-11" value="&lt;font color=&quot;#7f00ff&quot;&gt;node-controller&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="319" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZJ7Ltq4caiJP8JVCh5ZW-12" value="" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="552.5" y="380" as="sourcePoint" />
+            <mxPoint x="399.5" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
